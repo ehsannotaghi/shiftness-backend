@@ -1,6 +1,5 @@
 <?php
-// Validation helpers
-// Place commonly used validation functions here and include with require_once
+// Validation helpers only. Do NOT redeclare sendResponse here.
 
 function isValidEmail($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
