@@ -17,6 +17,9 @@ RUN if [ -f /var/www/html/composer.json ]; then \
       composer install --no-dev --optimize-autoloader --working-dir=/var/www/html; \
     fi
 
+# Install PostgreSQL PDO extension for PHP
+RUN docker-php-ext-install pdo_pgsql
+
 EXPOSE 80
 
 # Default Apache foreground command provided by the base image
