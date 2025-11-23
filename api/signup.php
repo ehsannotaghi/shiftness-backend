@@ -1,4 +1,5 @@
 <?php
+require_once '../utils/cors.php';
 // Database configuration
 class Database {
     private $host = "dpg-d4hl4np5pdvs739ae7g0-a";

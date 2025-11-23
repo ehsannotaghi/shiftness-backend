@@ -1,12 +1,19 @@
 <?php
-header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type");
-
-require_once '../utils/response.php';
-
-// Sign out is handled on the client side by removing the token
-// This endpoint is just for consistency
-sendResponse(200, true, "Signed out successfully");
+// Standardized response helper
+// Define sendResponse if not already defined elsewhere
+if (!function_exists('sendResponse')) {
+	function sendResponse($statusCode, $success, $message, $data = null) {
+		http_response_code($statusCode);
+		header('Content-Type: application/json; charset=utf-8');
+		$response = [
+			'success' => $success,
+			'message' => $message
+		];
+		if ($data !== null) {
+			$response['data'] = $data;
+		}
+		echo json_encode($response);
+		exit;
+	}
+}
 ?>
