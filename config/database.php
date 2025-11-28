@@ -1,7 +1,7 @@
 <?php
 // Database configuration
 class Database {
-    private $host = "dpg-d4hl4np5pdvs739ae7g0-a";
+    private $host = "dpg-d4hl4np5pdvs739ae7g0-a.oregon-postgres.render.com";
     private $db_name = "shiftness_db";
     private $username = "shiftness_db_user";
     private $password = "mX10R716zy0oPItryL8w2pj2lix7Z9r6";
