@@ -2,10 +2,10 @@
 require_once '../utils/cors.php';
 // Database configuration
 class Database {
-    private $host = "dpg-d4hl4np5pdvs739ae7g0-a.oregon-postgres.render.com";
-    private $db_name = "shiftness_db";
-    private $username = "shiftness_db_user";
-    private $password = "mX10R716zy0oPItryL8w2pj2lix7Z9r6";
+    private $host = "YOUR_DB_HOST";
+    private $db_name = "YOUR_DB_NAME";
+    private $username = "YOUR_DB_USER";
+    private $password = "YOUR_DB_PASSWORD";
     private $port = "5432";
     public $conn;
 
